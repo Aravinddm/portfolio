@@ -146,6 +146,8 @@
   .skill-card ul{ list-style:none; }
   .skill-card li{ font-size:14.5px; padding:6px 0; border-top:1px solid var(--line); }
   .skill-card li:first-child{ border-top:none; }
+  .skill-sub-label{ font-family:var(--mono); font-size:10px; color:var(--amber); text-transform:uppercase; letter-spacing:1px; margin-top:12px; margin-bottom:4px; }
+  .skill-sub-label:first-of-type{ margin-top:0; }
  
   /* CERTS */
   .cert-list{ display:flex; flex-direction:column; gap:0; border:1px solid var(--line); border-radius:10px; overflow:hidden; }
@@ -324,11 +326,14 @@
     <div class="skill-grid">
       <div class="skill-card">
         <div class="k">Languages</div>
-        <ul><li>Python</li><li>SQL</li><li>Linux</li></ul>
+        <ul><li>Python</li><li>SQL</li></ul>
       </div>
       <div class="skill-card">
-        <div class="k">Frameworks</div>
-        <ul><li>Django</li><li>Angular</li></ul>
+        <div class="k">Web Development</div>
+        <div class="skill-sub-label">Frontend</div>
+        <ul><li>HTML</li><li>CSS</li><li>React.js</li></ul>
+        <div class="skill-sub-label">Backend</div>
+        <ul><li>Node.js</li><li>Express.js</li></ul>
       </div>
       <div class="skill-card">
         <div class="k">Tools</div>
