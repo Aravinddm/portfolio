@@ -6,7 +6,7 @@
 <title>Aravind D M — Cloud & Data Portfolio</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
-
+ 
   :root{
     --bg: #0A0F1A;
     --bg-panel: #0F1626;
@@ -20,7 +20,7 @@
     --display: 'Space Grotesk', sans-serif;
     --body: 'Inter', sans-serif;
   }
-
+ 
   *{ box-sizing:border-box; margin:0; padding:0; }
   html{ scroll-behavior:smooth; }
   body{
@@ -32,10 +32,10 @@
       radial-gradient(circle at 1px 1px, rgba(255,255,255,0.035) 1px, transparent 0);
     background-size: 28px 28px;
   }
-
+ 
   a{ color:inherit; text-decoration:none; }
   .wrap{ max-width:1040px; margin:0 auto; padding:0 28px; }
-
+ 
   /* NAV */
   nav{
     position:sticky; top:0; z-index:50;
@@ -46,7 +46,7 @@
   nav .wrap{ display:flex; justify-content:flex-end; align-items:center; height:64px; }
   .navlinks{ display:flex; gap:28px; font-size:14px; color:var(--text-dim); }
   .navlinks a:hover{ color:var(--text); }
-
+ 
   /* HERO */
   .hero{ padding:96px 0 72px; border-bottom:1px solid var(--line); position:relative; overflow:hidden; }
   .hero-grid{ display:flex; justify-content:space-between; align-items:center; gap:48px; }
@@ -87,7 +87,15 @@
   .btn-primary:hover{ box-shadow:0 0 22px rgba(95,227,200,0.35); }
   .btn-ghost{ color:var(--text); }
   .btn-ghost:hover{ border-color:var(--text-dim); }
-
+  .btn-download{
+    color:var(--text); background:var(--bg-panel);
+    display:inline-flex; align-items:center; gap:9px;
+  }
+  .btn-download svg{ width:15px; height:15px; flex:0 0 auto; }
+  .btn-download:hover{ border-color:var(--cyan); color:var(--cyan); box-shadow:0 0 16px rgba(95,227,200,0.18); }
+  .btn-download:active{ transform:translateY(1px); box-shadow:none; }
+  .btn-download:focus-visible{ outline:2px solid var(--cyan); outline-offset:2px; }
+ 
   /* STATS STRIP */
   .stats{ border-bottom:1px solid var(--line); }
   .stats .wrap{ display:grid; grid-template-columns:repeat(4,1fr); }
@@ -95,14 +103,14 @@
   .stat:first-child{ border-left:none; padding-left:0; }
   .stat .num{ font-family:var(--display); font-size:30px; font-weight:700; color:var(--cyan); }
   .stat .label{ font-size:12px; color:var(--text-dim); font-family:var(--mono); margin-top:4px; }
-
+ 
   /* SECTION HEADER */
   .section{ padding:72px 0; border-bottom:1px solid var(--line); }
   .section-head{ display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:40px; flex-wrap:wrap; gap:12px; }
   .section-tag{ font-family:var(--mono); font-size:12px; color:var(--amber); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; display:block; }
   .section-title{ font-family:var(--display); font-size:30px; font-weight:600; }
   .section-note{ font-size:13px; color:var(--text-dim); max-width:280px; text-align:right; }
-
+ 
   /* PROJECT PIPELINE CARD */
   .project{
     background:var(--bg-panel); border:1px solid var(--line); border-radius:10px;
@@ -112,7 +120,7 @@
   .project-title{ font-family:var(--display); font-size:21px; font-weight:600; }
   .project-meta{ font-family:var(--mono); font-size:12px; color:var(--text-dim); margin-top:6px; }
   .project-meta a{ color:var(--cyan); }
-
+ 
   .pipeline{ display:flex; align-items:stretch; gap:0; flex-wrap:wrap; margin:18px 0; }
   .node{
     background:var(--bg-panel-2); border:1px solid var(--line); border-radius:8px;
@@ -124,13 +132,13 @@
     display:flex; align-items:center; justify-content:center;
     color:var(--cyan); font-family:var(--mono); font-size:16px; padding:0 10px; flex:0 0 auto;
   }
-
+ 
   .stack-row{ display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
   .chip{
     font-family:var(--mono); font-size:11.5px; color:var(--text-dim);
     border:1px solid var(--line); padding:5px 11px; border-radius:20px;
   }
-
+ 
   /* SKILLS */
   .skill-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
   .skill-card{ background:var(--bg-panel); border:1px solid var(--line); border-radius:10px; padding:22px; }
@@ -138,20 +146,20 @@
   .skill-card ul{ list-style:none; }
   .skill-card li{ font-size:14.5px; padding:6px 0; border-top:1px solid var(--line); }
   .skill-card li:first-child{ border-top:none; }
-
+ 
   /* CERTS */
   .cert-list{ display:flex; flex-direction:column; gap:0; border:1px solid var(--line); border-radius:10px; overflow:hidden; }
   .cert-row{ display:flex; justify-content:space-between; align-items:center; padding:16px 22px; border-bottom:1px solid var(--line); background:var(--bg-panel); font-size:14.5px; }
   .cert-row:last-child{ border-bottom:none; }
   .cert-row .issuer{ font-family:var(--mono); font-size:12px; color:var(--amber); }
-
+ 
   /* EDUCATION */
   .edu-row{ display:flex; gap:24px; padding:20px 0; border-top:1px solid var(--line); }
   .edu-row:first-of-type{ border-top:none; }
   .edu-tag{ font-family:var(--mono); font-size:12px; color:var(--cyan); width:50px; flex:0 0 auto; padding-top:2px; }
   .edu-body .school{ font-family:var(--display); font-size:17px; font-weight:600; }
   .edu-body .meta{ font-size:13px; color:var(--text-dim); margin-top:3px; }
-
+ 
   /* FOOTER / CONTACT */
   footer{ padding:64px 0 48px; }
   .contact-title{ font-family:var(--display); font-size:32px; font-weight:600; max-width:520px; }
@@ -159,7 +167,7 @@
   .contact-links{ display:flex; gap:18px; font-family:var(--mono); font-size:13px; }
   .contact-links a{ color:var(--cyan); }
   .foot-note{ font-size:12px; color:var(--text-dim); margin-top:48px; font-family:var(--mono); }
-
+ 
   @media (max-width:760px){
     .hero-grid{ flex-direction:column-reverse; text-align:center; }
     .hero-contact{ justify-content:center; }
@@ -174,7 +182,7 @@
 </style>
 </head>
 <body>
-
+ 
 <nav>
   <div class="wrap">
     <div class="navlinks">
@@ -185,7 +193,7 @@
     </div>
   </div>
 </nav>
-
+ 
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
@@ -195,11 +203,6 @@
         <a href="#work" class="btn btn-primary">View projects →</a>
         <a href="#contact" class="btn btn-ghost">Get in touch</a>
       </div>
-      <div class="hero-contact">
-        <a href="mailto:dmaravind30@gmail.com">✉ dmaravind30@gmail.com</a>
-        <a href="https://www.linkedin.com/in/aravind-d-m-399738259/" target="_blank">in/aravind-d-m</a>
-        <a href="https://github.com/Aravinddm" target="_blank">github.com/Aravinddm</a>
-      </div>
     </div>
     <div class="hero-photo">
       <img src="portfolio.png" alt="Aravind D M">
@@ -207,7 +210,7 @@
     </div>
   </div>
 </section>
-
+ 
 <section class="stats">
   <div class="wrap">
     <div class="stat"><div class="num">04</div><div class="label">PROJECTS SHIPPED</div></div>
@@ -216,7 +219,7 @@
     <div class="stat"><div class="num">04</div><div class="label">CERTIFICATIONS</div></div>
   </div>
 </section>
-
+ 
 <section class="section" id="work">
   <div class="wrap">
     <div class="section-head">
@@ -226,7 +229,7 @@
       </div>
       <div class="section-note">Each one follows the same shape: input → model → decision. That's the pattern I want to apply to data pipelines next.</div>
     </div>
-
+ 
     <!-- Project 1 -->
     <div class="project">
       <div class="project-top">
@@ -246,7 +249,7 @@
         <span class="chip">Python</span><span class="chip">Flask</span><span class="chip">MySQL</span><span class="chip">Scikit-learn</span><span class="chip">HTML/CSS/JS</span>
       </div>
     </div>
-
+ 
     <!-- Project 2 -->
     <div class="project">
       <div class="project-top">
@@ -266,7 +269,7 @@
         <span class="chip">Python</span><span class="chip">Flask</span><span class="chip">TensorFlow/Keras</span><span class="chip">SQLite3</span><span class="chip">HTML/CSS/JS</span>
       </div>
     </div>
-
+ 
     <!-- Project 3 -->
     <div class="project">
       <div class="project-top">
@@ -286,7 +289,7 @@
         <span class="chip">Python</span><span class="chip">Flask/Django</span><span class="chip">TensorFlow/Keras</span><span class="chip">OpenCV</span><span class="chip">HTML/CSS/JS</span>
       </div>
     </div>
-
+ 
     <!-- Project 4 -->
     <div class="project">
       <div class="project-top">
@@ -306,10 +309,10 @@
         <span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">HTML/CSS/JS</span><span class="chip">XAMPP/Apache</span>
       </div>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <section class="section" id="skills">
   <div class="wrap">
     <div class="section-head">
@@ -334,7 +337,7 @@
     </div>
   </div>
 </section>
-
+ 
 <section class="section" id="education">
   <div class="wrap">
     <div class="section-head">
@@ -343,7 +346,7 @@
         <div class="section-title">Education & Certifications</div>
       </div>
     </div>
-
+ 
     <div class="edu-row">
       <div class="edu-tag">UG</div>
       <div class="edu-body">
@@ -358,7 +361,7 @@
         <div class="meta">Master of Computer Applications · Bharathiar University · Expected 2027 · CGPA 7.5 (till Sem 2)</div>
       </div>
     </div>
-
+ 
     <div style="margin-top:32px;" class="cert-list">
       <div class="cert-row"><span>Soft Skill Development and Blockchain Applications</span><span class="issuer">NPTEL</span></div>
       <div class="cert-row"><span>Python for Beginners</span><span class="issuer">COURSERA</span></div>
@@ -367,7 +370,7 @@
     </div>
   </div>
 </section>
-
+ 
 <footer id="contact">
   <div class="wrap">
     <div class="section-tag">Let's talk</div>
@@ -383,6 +386,7 @@
     <div class="foot-note">Aravind D M — built with care, one pipeline at a time.</div>
   </div>
 </footer>
-
+ 
 </body>
 </html>
+ 
